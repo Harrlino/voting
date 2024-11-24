@@ -1,0 +1,182 @@
+:root {
+  --bg: #f0f2f5;
+  --blue: #1877f2;
+  --dark-blue: #1360c4;
+  --white: #FFF;
+  --green: #42b72a;
+  --dark-green: #369423;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  overflow: hidden;
+  background-color: var(--bg);
+  font-family: Helvetica, sans-serif;
+}
+
+.main-wrapper {
+  width: 350px; /* Adjusted width */
+  margin: 40px auto; /* Centering with margin */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center content vertically */
+}
+
+.branding {
+  text-align: center;
+}
+
+.logo {
+  color: var(--blue);
+  font-size: 3.7rem;
+  letter-spacing: -3px;
+}
+
+.slogan {
+  font-size: 1.5rem;
+  font-weight: lighter;
+  margin: 20px 0;
+}
+
+.panel {
+  background-color: var(--white);
+  width: 76%; /* Adjust width to fit within the main wrapper */
+  padding: 15px; /* Less padding for a compact look */
+  margin: 10px auto; /* Center the panel and reduce margin */
+  border-radius: 8px; /* Slightly rounded corners */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  text-align: center;
+}
+
+
+input {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 15px;
+  border: 1px solid #d2d2d2;
+  border-radius: 6px;
+  font-size: 1rem; /* Set base font size for consistency */
+}
+
+input::placeholder {
+  font-size: 1rem;
+}
+
+input:focus {
+  outline: none; /* Remove default outline */
+  border: 1px solid var(--blue); /* Border on focus */
+}
+
+input:focus::placeholder {
+  color: #c2c2c2;
+}
+
+.log-in-button {
+  background-color: var(--blue);
+  color: var(--white);
+  font-size: 1.2rem;
+  font-weight: bolder;
+  padding: 10px;
+  border: none; /* Remove default border */
+  border-radius: 6px;
+  transition: background-color 100ms ease-in-out;
+}
+
+.log-in-button:hover {
+  background-color: var(--dark-blue);
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.forgot {
+  font-size: 0.9rem;
+  color: var(--blue);
+  margin: 10px 0; /* Added margin for spacing */
+}
+
+hr {
+  margin: 18px 0;
+  opacity: 0.3;
+}
+
+.register-button {
+  background-color: var(--green);
+  color: var(--white);
+  display: inline-block;
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 6px;
+  font-weight: bolder;
+  transition: background-color 100ms ease-in-out;
+  border: none; /* Remove default border */
+}
+
+.register-button:hover {
+  background-color: var(--dark-green);
+}
+
+.bottom-link {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  font-size: 0.9rem;
+}
+
+.page {
+  color: #000;
+  font-weight: bold;
+}
+
+footer {
+  background-color: var(--white);
+  padding: 25px 35px;
+  position: absolute; /* Position footer */
+  bottom: 0; /* Stick to the bottom */
+  width: 100%; /* Full width */
+}
+
+ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  font-size: 0.75rem;
+  color: #7e7e7e;
+  line-height: 1.5;
+  justify-content: center; /* Center footer links */
+}
+
+li {
+  margin-right: 15px;
+}
+
+@media (min-width: 890px) {
+  .main-wrapper {
+    width: 90%;
+    max-width: 980px;
+    flex-direction: row;
+    padding-top: 70px;
+    justify-content: space-between;
+  }
+
+  .branding {
+    text-align: left;
+    padding-top: 85px;
+    width: 484px;
+  }
+
+  .slogan {
+    font-size: 1.6rem;
+  }
+}
